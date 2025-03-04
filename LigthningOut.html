@@ -1,0 +1,33 @@
+<html>
+    <script src  = "https://metacubesoftware22-dev-ed.develop.my.site.com/lightning/lightning.Out.js"></script>
+
+    <div data-lightning-out ="true"></div>
+    <script>
+        const  appName = demoLightningOut
+        const  componentName = demo
+        const  lightningEndpoint ="https://metacubesoftware22-dev-ed.develop.my.site.com"
+        const targetElement  = document.querySelector('[data-lightning-out]');
+
+        const componentAttribute  = {
+           
+        } 
+        $Lightning.use(
+            appName,
+            function(){
+              $Lightning.createComponent(
+              componentName,
+              componentAttribute,
+              targetElement,
+              function(cmp){
+                 console.log('lightning component created');
+              }
+              );
+              },
+              lightningEndpoint
+        );
+
+    </script>
+</html>
+
+
+
